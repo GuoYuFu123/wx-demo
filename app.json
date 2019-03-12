@@ -1,0 +1,54 @@
+{
+    "pages": ["pages/index/index", "pages/logs/logs", "pages/login/login"],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+
+    "tabBar": {
+        "color": "#666666",
+        "selectedColor": "#000000",
+        "borderStyle": "white",
+        "backgroundColor": "#f8f9fb",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "static/image/home.png",
+                "selectedIconPath": "static/image/home-actived.png"
+            },
+            {
+                "pagePath": "pages/logs/logs",
+                "text": "日志",
+                "iconPath": "static/image/note.png",
+                "selectedIconPath": "static/image/note-actived.png"
+            },
+            {
+                "pagePath": "pages/login/login",
+                "text": "登陆",
+                "iconPath": "static/image/profile.png",
+                "selectedIconPath": "static/image/profile-actived.png"
+            }
+        ]
+    },
+    "component": true,
+    "usingComponents": {
+        "i-button": "static/iview/button/index",
+        "i-radio-group": "static/iview/radio-group/index",
+        "i-radio": "static/iview/radio/index",
+        "i-grid": "static/iview/grid/index",
+        "i-grid-item": "static/iview/grid-item/index",
+        "i-grid-icon": "static/iview/grid-icon/index",
+        "i-grid-label": "static/iview/grid-label/index",
+        "i-divider": "static/iview/divider/index",
+        "i-tabs": "static/iview/tabs/index",
+        "i-tab": "static/iview/tab/index",
+        "i-radio-group": "static/iview/radio-group/index",
+        "i-radio": "static/iview/radio/index",
+        "i-page": "static/iview/page/index",
+        "i-input": "static/iview/input/index",
+        "i-icon": "static/iview/icon/index"
+    }
+}

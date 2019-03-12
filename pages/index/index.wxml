@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="baseinfo">
+        <text>session_key: {{session_key}} \n</text> 
+        <text>openid: {{openid}} \n</text>    
+        <text>access_token: {{access_token}}</text> 
+    </view>
+    <view>
+        <i-button  open-type='share'>分享</i-button>
+    </view>
+
+</view>
