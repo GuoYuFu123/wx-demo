@@ -55,10 +55,15 @@ fly.interceptors.response.use(
         //return Promise.resolve("ssss")
     }
 )
-function fetch(url, params, methods) {
+function fetch(url, params, methods, config) {
+    var responseType = config ? (config.responseType || "") : ""
     return new Promise((res) => {
         fly
-            .request(url, params, { methods: methods, headers: { 'Content-Type': 'application/text' } })
+            .request(url, params, {
+                method: methods,
+                headers: { 'Content-Type': 'application/json' },
+                responseType: responseType || ""
+            })
             .then(response => {
                 res(response)
             })
@@ -71,7 +76,8 @@ function fetch(url, params, methods) {
 function getJson(url, params = {}) {
     return fetch(url, params, 'get')
 }
-function postJson(url, params = {}) {
-    return fetch(url, params, 'post')
+function postJson(url, params = {}, config) {
+    console.log(config)
+    return fetch(url, params, 'post', config)
 }
 export { getJson, postJson }

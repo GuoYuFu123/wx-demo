@@ -16,14 +16,22 @@ App({
         }
         // 获取openid  {session_key: "kPG8/lUc3Bc3LV4Tp3DBiQ==", openid: "okNKA4hJQNWoe8f6O28D3n0dpdbM"}
         api.code2Session(params).then(res => {    
-            wx.setStorageSync("session_key", res.session_key) 
-            wx.setStorageSync("openid" ,res.openid)     
+            this.globalData.session_key = res.session_key;
+            this.globalData.openid = res.openid;
+            //防止异步
+            if(this.openidCallback)     {
+                this.openidCallback(res.openid)
+            }
+            if (this.sessionKeyCallback) {
+                this.sessionKeyCallback(res.session_key)
+            }
         })
         // 获取access_token
         api.getAccessToken().then(res => {
-            console.log('access-token')
-            console.log(res)
-            wx.setStorageSync("access_token", res.access_token) 
+            this.globalData.access_token = res.access_token;
+            if (this.accessTokenCallback) {
+                this.accessTokenCallback( res.access_token )
+            }
         })
       }
     })

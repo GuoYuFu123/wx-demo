@@ -19,10 +19,10 @@ const api = {
         };
         return getJson(url, params)
     },
-    getWXACodeUnlimit() {
-        let url = wxUrl + '/wxa/getwxacodeunlimit'
-        let params = {}
-        return postJson(url, params)
+    getWXACodeUnlimit(params) {
+        let url = `${wxUrl}/wxa/getwxacodeunlimit?access_token=${params.access_token}`
+        let param = {scene : params.scene}
+        return postJson(url, param, { responseType: 'arraybuffer'})
     }
 }
 export default api;
