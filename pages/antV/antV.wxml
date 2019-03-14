@@ -1,2 +1,5 @@
 <!--pages/antV/antV.wxml-->
-<text>pages/antV/antV.wxml</text>
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <ff-canvas id="column-dom" canvas-id="column" opts="{{ opts }}"></ff-canvas>
+</view>
+  

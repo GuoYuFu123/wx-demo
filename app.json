@@ -1,14 +1,12 @@
 {
   "pages": [
     "pages/antV/antV",
-    "pages/index/index",
     "pages/logs/logs",
     "pages/login/login"
-    
   ],
   "window": {
     "navigationBarBackgroundColor": "#40586d",
-    "navigationBarTitleText": "爱果果",
+    "navigationBarTitleText": "慧盈管家",
     "navigationBarTextStyle": "black",
     "backgroundColor": "#f8f9fb",
     "backgroundTextStyle": "dark",
@@ -42,6 +40,7 @@
   },
   "component": true,
   "usingComponents": {
+    "ff-canvas": "@antv/f2-canvas",
     "i-button": "static/iview/button/index",
     "i-radio-group": "static/iview/radio-group/index",
     "i-radio": "static/iview/radio/index",

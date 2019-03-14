@@ -1,0 +1,22 @@
+{
+  "name": "wx-demo",
+  "version": "1.0.0",
+  "description": "原生微信小程序demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuoYuFu123/wx-demo.git"
+  },
+  "author": "fugy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuoYuFu123/wx-demo/issues"
+  },
+  "homepage": "https://github.com/GuoYuFu123/wx-demo#readme",
+  "dependencies": {
+    "@antv/f2-canvas": "^1.0.5"
+  }
+}
